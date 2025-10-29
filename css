@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #0f0f0f, #000);
+  color: #f0f0f0;
+}
+header {
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+}
+h1 {
+  font-size: 3rem;
+  background: linear-gradient(to right, #00f5ff, #ff00c8);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: pulse 3s infinite;
+}
+.cta {
+  padding: 1rem 2rem;
+  background: #00f5ff;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.spinner {
+  margin: auto;
+  width: 60px;
+  height: 60px;
+  border: 6px solid #00f5ff;
+  border-top: 6px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+.progress-container {
+  width: 80%;
+  margin: 1rem auto;
+  background: #222;
+  border-radius: 10px;
+}
+#progressBar, #threatBar {
+  height: 20px;
+  width: 0%;
+  border-radius: 10px;
+}
+#progressBar { background: #00f5ff; }
+#threatBar { background: #ff0044; }
+.tiers {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.tiers div {
+  background: #222;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 250px;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
